@@ -1,0 +1,19 @@
+---
+title: "Deer map"
+author: "Erika"
+date: "9/11/2020"
+output: html_document
+---
+## Spatial view of Snapshot Data
+Need to look at snapshot usa data and limit to only those sites in which WTD could occur (are within the range boundary).
+
+## Set up workspace
+Turn on libraries, load data
+```{r}
+rm(list = ls())
+library(tidyverse)
+library(rgdal) #for spatial data
+Det<-read.csv("Data/deployments_detection_count.csv")
+```
+## Spatial stuff
+

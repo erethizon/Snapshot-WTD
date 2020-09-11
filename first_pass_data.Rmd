@@ -1,0 +1,27 @@
+---
+title: "Snapshot deer data - exploratory analysis - First pass"
+output: html_notebook
+---
+## Working on a first pass of exploratory data analysis on the question "Do deer ruin everything"
+
+Collaboration with Bill McShea, Stephen Webb, Marcus Lashua et others from Snapshot team (Mike, Roland).
+
+Based on zoom chat 4 Sept 2020 with McShea, Webb.  ELB to do WTD, Bill will do Mulies.
+
+Summary stats on relationship b/w deer abundance and urbanization, land use category, mammal species richness, physiographic location.  Constrain sample sites to those within natural range of WTD.  
+
+## Set up workspace
+Add packages and load data
+
+```{r}
+rm(list = ls()) #clear workspace
+library(tidyverse)
+
+#read in first data set
+GPP_Cult<-read.csv("Data/SS_USADeployments_annotated.csv", stringsAsFactors = T)
+TempPrecip<-read.csv("Data/SNAPSHOT_USA_2019_observations__temp_precip.csv")
+Sub<-read.csv("Data/per_subproject.csv")
+Det<-read.csv("Data/deployments_detection_count.csv")
+```
+
+
